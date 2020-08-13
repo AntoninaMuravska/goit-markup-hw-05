@@ -149,6 +149,8 @@ html {
 
   color: var(--title-text-color);
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -178,6 +180,8 @@ html {
   align-items: center;
   color: var(--primary-text-color);
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-nav {
@@ -260,6 +264,14 @@ html {
   letter-spacing: 0.06em;
   text-align: center;
   text-decoration: none;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  background-color: var(--accent-text-color);
+  color: var(--accent-color);
 }
 
 /* Features */
@@ -443,11 +455,12 @@ html {
   align-items: center;
   width: 44px;
   height: 44px;
-  /* padding-top: 12px;
-  padding-bottom: 12px; */
-  /* background: rgba(255, 255, 255, 0.1); */
-  color: var(--icon-color);
   border-radius: 50%;
+
+  color: var(--icon-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -493,6 +506,9 @@ html {
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover {
@@ -561,9 +577,12 @@ html {
 .footer .social-link {
   color: var(--accent-text-color);
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer .social-link:hover {
+.footer .social-link:hover,
+.footer .social-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -606,7 +625,9 @@ html {
   line-height: 1.62;
   letter-spacing: 0.03em;
 
-  /* outline: 1px solid tomato; */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -684,15 +705,12 @@ html {
 
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* opacity: 0; */
 }
 
 .portfolio-item:hover .description-overlay,
 .portfolio-item:hover .item-description,
 .portfolio-item-link:focus .description-overlay,
 .portfolio-item-link:focus .item-description {
-  /* opacity: 1; */
   transform: translateY(0);
 }
 
@@ -703,18 +721,12 @@ html {
   width: 100%;
   height: 100%;
 
-  /* opacity: 0; */
-
   color: var(--accent-text-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.556;
   letter-spacing: 0.03em;
 }
-
-/* .portfolio-list-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-} */
 
 .portfolio-picture {
   display: block;

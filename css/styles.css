@@ -661,28 +661,11 @@ html {
   margin-bottom: 30px;
 }
 
-.portfolio-item-link {
-  display: block;
-  width: 370px;
-  height: 404px;
-  text-decoration: none;
-}
-
-.portfolio-item:hover {
+.portfolio-item-link:hover .card,
+.portfolio-item-link:focus .card {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-.portfolio-item-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-/* .portfolio-item:hover,
-.portfolio-item:focus .portfolio-item {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-} */
 
 .portfolio-titles {
   padding: 20px 24px;
@@ -696,29 +679,28 @@ html {
 }
 
 .description-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 100%;
 
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-
-  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .description-overlay,
-.portfolio-item:hover .item-description,
-.portfolio-item-link:focus .description-overlay,
-.portfolio-item-link:focus .item-description {
-  transform: translateY(0);
+.portfolio-item-link:focus .description-overlay {
+  transform: translateY(-100%);
 }
 
 .item-description {
   margin: 0;
   padding: 63px 24px;
-  position: absolute;
+  top: 100%;
   width: 100%;
   height: 100%;
 
